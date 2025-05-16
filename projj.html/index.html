@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduVerse is your gateway to quality online education." />
+  <meta name="keywords" content="online courses, education, elearning" />
+  <title>EduVerse | All-in-One</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    section {
+      padding: 40px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 10px;
+      display: flex;
+      gap: 15px;
+      border-bottom: 1px solid #ccc;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .flex {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .team-member {
+      animation: fadeIn 1s ease forwards;
+      flex: 1 1 45%;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#details">Course Details</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>Welcome to EduVerse</h1>
+    <p>Empowering Future Innovators</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+  </section>
+
+  <section>
+    <h2>Why EduVerse?</h2>
+    <p>At EduVerse, we offer top-quality online education for learners around the world.</p>
+    <div class="grid">
+      <article>
+        <h3>Certified Courses</h3>
+        <p>Recognized by leading institutions and taught by experts.</p>
+      </article>
+      <article>
+        <h3>Interactive Learning</h3>
+        <p>Engage with instructors and peers through rich content.</p>
+      </article>
+      <article>
+        <h3>Flexible Schedule</h3>
+        <p>Learn at your own pace with our self-paced courses.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="courses">
+    <h1>Available Courses</h1>
+    <p>Choose from a wide range of courses including Web Development, Data Science, and UI/UX Design.</p>
+  </section>
+
+  <section id="details">
+    <h1>Web Development Bootcamp</h1>
+    <p>Master HTML, CSS, and JavaScript to build modern web applications from scratch.</p>
+
+    <h2>Intro Video</h2>
+    <video width="100%" controls>
+      <source src="videos/webdev-intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>Instructor</h2>
+    <div class="flex">
+      <div>
+        <img src="images/instructor.jpg" alt="Instructor" style="width: 150px; border-radius: 50%;">
+      </div>
+      <div>
+        <h3>Dr. Priya Sharma</h3>
+        <p>Senior Web Developer with 10+ years of experience in full-stack development.</p>
+      </div>
+    </div>
+
+    <h2>FAQs</h2>
+    <details>
+      <summary>What are the prerequisites?</summary>
+      <p>Basic understanding of computers and internet. No coding experience required.</p>
+    </details>
+
+    <details>
+      <summary>Is there a certificate?</summary>
+      <p>Yes, a certificate of completion is provided after successful assessment.</p>
+    </details>
+  </section>
+
+  <section id="about">
+    <h1>About EduVerse</h1>
+    <p>EduVerse is an online learning platform focused on delivering quality and affordable education worldwide.</p>
+
+    <h2>Our Journey</h2>
+    <ol>
+      <li>2019 - Founded with 3 instructors</li>
+      <li>2020 - 10,000+ enrolled students</li>
+      <li>2022 - Expanded to 12 course categories</li>
+    </ol>
+
+    <h2>Our Team</h2>
+    <div class="grid">
+      <div class="team-member">
+        <img src="images/team1.jpg" alt="Team Member 1" style="width: 100%; border-radius: 10px;">
+        <h3>Ankit Mehra</h3>
+        <p>CEO & Co-founder</p>
+      </div>
+      <div class="team-member">
+        <img src="images/team2.jpg" alt="Team Member 2" style="width: 100%; border-radius: 10px;">
+        <h3>Riya Joshi</h3>
+        <p>Chief Academic Officer</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Fill out the form below and we'll get back to you soon.</p>
+
+    <form action="#" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required minlength="3" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="course">Select a Course:</label>
+      <select id="course" name="course" required>
+        <option value="">--Choose a course--</option>
+        <option value="web">Web Development</option>
+        <option value="data">Data Science</option>
+        <option value="uiux">UI/UX Design</option>
+      </select>
+
+      <label>Preferred Contact Method:</label>
+      <label><input type="radio" name="contact" value="email" checked /> Email</label>
+      <label><input type="radio" name="contact" value="phone" /> Phone</label>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <label><input type="checkbox" name="newsletter" /> Subscribe to our newsletter</label>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EduVerse. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

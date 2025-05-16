@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Marks</th>
+    </tr>
+    <tr>
+      <td>Aavani</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td>Sayuj</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td>Kishan</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>Vamshi</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>Disha</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>Arsheel</td>
+      <td>20</td>
+    </tr>
+  </table>
+
+  <script>
+    const rows = document.querySelectorAll(".table tr");
+
+    for (let i = 1; i < rows.length; i++) {
+      const cells = rows[i].getElementsByTagName("td");
+      const marks = parseInt(cells[1].innerText);
+
+      if (marks < 30) {
+        rows[i].style.backgroundColor = "red";
+      }
+    }
+  </script>
+
+
+</body>
+</html>

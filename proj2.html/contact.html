@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact EduVerse for course inquiries and support." />
+  <title>EduVerse | Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Fill out the form below and we'll get back to you soon.</p>
+
+    <form action="#" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required minlength="3" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required
+             minlength="8"
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+             title="Password must be at least 8 characters long, and include at least one uppercase letter, one lowercase letter, and one number." />
+
+      <label for="course">Select a Course:</label>
+      <select id="course" name="course" required>
+        <option value="">--Choose a course--</option>
+        <option value="web">Web Development</option>
+        <option value="data">Data Science</option>
+        <option value="uiux">UI/UX Design</option>
+      </select>
+
+      <label>Preferred Contact Method:</label>
+      <label><input type="radio" name="contact" value="email" checked /> Email</label>
+      <label><input type="radio" name="contact" value="phone" /> Phone</label>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <label><input type="checkbox" name="newsletter" /> Subscribe to our newsletter</label>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+
+  <footer> 
+    <p>&copy; 2025 EduVerse. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

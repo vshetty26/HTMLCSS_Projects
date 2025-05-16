@@ -1,0 +1,65 @@
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #f5f7fa;
+  }
+
+  .grid-item {
+    max-width: 800px;
+    margin: auto;
+    overflow-x: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+  }
+
+  .table th, .table td {
+    padding: 14px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Add right border to first column */
+  .table th:first-child,
+  .table td:first-child {
+    border-right: 2px solid #ccc;
+  }
+
+  .table th {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1em;
+  }
+
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .table tr:hover {
+    background-color: #e8f0fe;
+    cursor: default;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding: 15px;
+    }
+
+    .table th, .table td {
+      padding: 12px 10px;
+      font-size: 14px;
+    }
+
+    .grid-item {
+      padding: 15px;
+    }
+  }
