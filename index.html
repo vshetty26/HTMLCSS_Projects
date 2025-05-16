@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">CyberSecure Blog</div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Threats</a>
+      <a href="#">Tips</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main>
+      <section class="blog-cards">
+
+        <article class="card">
+          <img src="image1.png" alt="Cyber Threats" />
+          <h2>Top 5 Cyber Threats in 2025</h2>
+          <p>From AI phishing to quantum hacking, here are the biggest cyber threats you need to know about this year.</p>
+          <button onclick="openModal('modal1')">Read More →</button>
+        </article>
+
+        <article class="card">
+          <img src="image2.jpg" alt="Strong Passwords" />
+          <h2>How to Create Strong Passwords</h2>
+          <p>Simple, practical techniques to make your passwords virtually unbreakable and protect your identity online.</p>
+          <button onclick="openModal('modal2')">Read More →</button>
+        </article>
+
+        <article class="card">
+          <img src="image3.jpg" alt="Social Engineering" />
+          <h2>What is Social Engineering?</h2>
+          <p>Hackers don’t just use code. Learn how psychological tricks can compromise your data.</p>
+          <button onclick="openModal('modal3')">Read More →</button>
+        </article>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <section>
+        <h3>About Me</h3>
+        <p>I’m a cybersecurity analyst sharing the latest in threats, tools, and safety tips online.</p>
+      </section>
+      <section>
+        <h3>Categories</h3>
+        <ul>
+          <li>Phishing</li>
+          <li>Encryption</li>
+          <li>Data Breaches</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Recent Posts</h3>
+        <ul>
+          <li>What’s a Zero-Day?</li>
+          <li>Protecting IoT Devices</li>
+          <li>Securing Public Wi-Fi</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal('modal1')" class="close">&times;</span>
+      <h2>Top 5 Cyber Threats in 2025</h2>
+      <p>In 2025, expect attacks leveraging AI, deepfakes for identity theft, quantum vulnerabilities, and smarter phishing attacks. Organizations must update legacy systems and train staff to stay resilient.</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal('modal2')" class="close">&times;</span>
+      <h2>How to Create Strong Passwords</h2>
+      <p>Use long, complex passwords with a mix of characters. Avoid common words. Consider using a password manager to generate and store them securely.</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal('modal3')" class="close">&times;</span>
+      <h2>What is Social Engineering?</h2>
+      <p>Social engineering manipulates people into revealing confidential information. Common methods include phishing, pretexting, and baiting. Always verify before clicking or sharing sensitive info.</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+  </script>
+</body>
+</html>
